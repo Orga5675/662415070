@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightFuel Traceability</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">ETHEREUM SEPOLIA DAPP</div>
+            <h1>🌙 NightFuel Traceability</h1>
+            <p>Blockchain-based Product Traceability</p>
+            <button id="connectBtn">Connect MetaMask</button>
+            <div id="walletInfo">Wallet: Not Connected</div>
+            <div id="networkInfo">Network: -</div>
+        </header>
+
+        <section class="card">
+            <h2>Create New Batch</h2>
+
+            <label for="batchId">Batch ID</label>
+            <input id="batchId" type="text" placeholder="Example: NF-001">
+
+            <label for="coffeeSource">Coffee Source</label>
+            <input id="coffeeSource" type="text" placeholder="Example: Thailand">
+
+            <label for="matchaSource">Matcha Source</label>
+            <input id="matchaSource" type="text" placeholder="Example: Japan">
+
+            <label for="productionDate">Production Date</label>
+            <input id="productionDate" type="date">
+
+            <label for="qcStatus">QC Status</label>
+            <select id="qcStatus">
+                <option value="Passed">Passed</option>
+                <option value="Pending">Pending</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+
+            <button id="createBtn">Create Batch</button>
+            <div id="transactionStatus"></div>
+        </section>
+
+        <section class="card">
+            <h2>Verify Batch</h2>
+            <label for="searchBatchId">Batch ID</label>
+            <input id="searchBatchId" type="text" placeholder="Example: NF-001">
+            <button id="verifyBtn">Verify Batch</button>
+            <div id="batchResult"></div>
+        </section>
+
+        <footer>
+            <span>Smart Contract</span>
+            <code>0x8525A3DCa9334fEB6A7A454044d9F1B573517476</code>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
